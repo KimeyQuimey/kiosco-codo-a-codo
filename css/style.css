@@ -1,0 +1,19 @@
+/* body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.login-title {
+  text-align: center;
+} */
+.centrado {
+  text-align: center;
+}

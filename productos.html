@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <title>Kiosco Codo a Codo</title>
+</head>
+
+<body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li style="padding-right: 3rem"><strong>Kiosko C2C</strong></li>          
+          <li><a href="./home.html" class="secondary"><small>Inicio</small></a></li>
+          <li><a aria-current="page" href="#" class="secondary"><small>Productos</small></a></li>
+        </ul>
+        <ul>
+          <li>
+            <a id="limpiar-token" href="./index.html" class="secondary"><small>Logout</small></a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
+    <main class="container">
+        <h1>Productos</h1>
+        <div>
+          <button id="abrir-agregar-producto" class="botonVerde">Agregar Producto</button>
+        </div>
+        <dialog id="modal-agregar-producto">
+          <div>
+            <h3 id="form-title">Agregar Producto</h3>
+            <form>
+              <label for="categorias">Categoria: </label>
+              <select name="categorias" id="categorias"></select>
+              </br>
+              <label for="producto-nombre">Nombre</label>
+              <input type="text" class="form-control" id="nuevo-producto-nombre">
+              </br>
+              <label for="producto-precio">Precio</label>
+              <input type="number" class="form-control" id="nuevo-producto-precio">
+            </form>
+            <button id="crear-producto">Guardar</button>
+            <button class="secondary" id="cerrar-modal-agregar-productos">Cancelar</button>
+          </div>
+        </dialog>
+        <table class="tabla" id="tabla-productos">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+        <dialog id="editar-producto">
+          <form>
+            <div>
+              <label for="editar-nombre">Nombre</label>
+              <input type="text" readonly id="editar-nombre">
+            </div>
+
+            <div>
+              <label for="editar-precio">Precio</label>
+              <input type="number" id="editar-precio">
+            </div>
+            <button id="editar-confimar-cambio">Guardar</button>
+            <button class="secondary" id="cerrar-modal-editar-productos">Cancelar</button>
+          </form>
+        </dialog>
+      </div>
+    </div>
+  </main>
+  <footer class="container">
+    <p style="text-align: center"><small>codo a codo @2024</small></p>
+  </footer>
+  <script src="./js/productos.js"></script>
+  <script src="./js/header.js"></script>
+</body>
+
+</html>
